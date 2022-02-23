@@ -17,14 +17,14 @@ const PhoneDetailComponent = ({ mobilePhones }) => {
 
     if(mobilePhone) {
         return (
-            <Card className='card-container' sx={{ width: '60%', height:'60vh' }}>
+            <Card className='card-container-details' sx={{ width: '60%', height:'60vh' }}>
                 <CardContent className="card-content" sx={{
                     flexDirection: 'row',
                     justifyContent: 'space-around',
                     alignItems: 'flex-start'
                 }}>
-                    <div>
-                        <img style={{height: 500}} src={mobilePhone?.image} alt={mobilePhone.name} />
+                    <div className='card-media-details'>
+                        <img src={mobilePhone?.image} alt={mobilePhone.name} />
                     </div>
                     <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
                         <p className='card-title' style={{ fontSize: 28 }}>{mobilePhone.name}</p>
@@ -45,8 +45,8 @@ const PhoneDetailComponent = ({ mobilePhones }) => {
                         }}>
                             {mobilePhone.description}
                         </p>
-                        <div style={{display:'flex', justifyContent:'flex-end', marginRight: 20}}>
-                            <Button sx={{width:'20%', marginTop: '30px'}} className= "primary-button" variant="contained" endIcon={<HomeIcon />} onClick={() => history(`/`)}>
+                        <div className='primary-button-details-container'>
+                            <Button sx={{width:'20%', marginTop: '30px'}} className= "primary-button-details" variant="contained" endIcon={<HomeIcon />} onClick={() => history(`/`)}>
                                 Go back
                             </Button>
                         </div>
