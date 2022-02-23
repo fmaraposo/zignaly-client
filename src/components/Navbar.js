@@ -8,11 +8,11 @@ import SearchIcon from '@mui/icons-material/Search';
 const Navbar = ({filterMobilePhones}) => {
 
     return (
-        <ul>
-            <li>
+        <ul className='navbar'>
+            <li className='logo'>
                 <img src={Logo} alt="Zignaly Logo" style={{cursor: 'pointer'}}/>
             </li>
-            <li style={{fontWeight: 600, fontSize: 24}}>
+            <li className= 'search-bar' style={{fontWeight: 600, fontSize: 24}}>
                 <TextField 
                     id="outlined-basic" 
                     label="Search" 
