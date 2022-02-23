@@ -1,5 +1,3 @@
-# Zignaly Frontend Challenge
-
 ## Steps:
 
 ## 1. Clone the two repositories to your local machine
