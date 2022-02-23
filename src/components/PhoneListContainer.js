@@ -44,12 +44,12 @@ const PhoneListContainer = ({ mobilePhones }) => {
                         </div>
                         <p className='card-title'>{mobilePhone.name}</p>
                         <ul style={{padding: 0}}>
-                            {mobilePhone.specifications?.map(specs => (
-                                <>
+                            {mobilePhone.specifications?.map((specs, index) => (
+                                <div key={index}>
                                     <li className='specifications-items'>{specs.camera}</li>
                                     <li className='specifications-items'>{specs.display}</li>
                                     <li className='specifications-items'>{specs.battery}</li>
-                                </>
+                                </div>
                             ))}
                         </ul>
                         <Button className='primary-button' variant="contained" endIcon={<ArrowForwardIosIcon />} onClick={() => history(`/${mobilePhone.id}`)}>

@@ -16,7 +16,6 @@ const getMobiles = () => {
       
         try {
             const response = await axios.get(apiURL + '/phones');
-            console.log(response)
             dispatch(listMobilePhones(response.data.mobiles))
 
         } catch(e) {

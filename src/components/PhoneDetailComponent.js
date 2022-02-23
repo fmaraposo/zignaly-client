@@ -46,7 +46,7 @@ const PhoneDetailComponent = ({ mobilePhones }) => {
                             {mobilePhone.description}
                         </p>
                         <div style={{display:'flex', justifyContent:'flex-end', marginRight: 20}}>
-                            <Button sx={{width:'20%'}} className= "primary-button" variant="contained" endIcon={<HomeIcon />} onClick={() => history(`/`)}>
+                            <Button sx={{width:'20%', marginTop: '30px'}} className= "primary-button" variant="contained" endIcon={<HomeIcon />} onClick={() => history(`/`)}>
                                 Go back
                             </Button>
                         </div>
