@@ -8,7 +8,8 @@ const reducer = (state = defaultState, action) => {
 
             const newState = {
                 ...state,
-                mobilePhones: action.payload
+                mobilePhones: action.payload,
+                filterMobilePhones: action.payload
             };
 
             return newState
@@ -17,7 +18,21 @@ const reducer = (state = defaultState, action) => {
 
         case Actions.Types.FILTER_MOBILES: {
 
-            const newState = {...state}
+            let newState = {...state}
+
+            const filterMobilePhones = newState.filterMobilePhones.filter(mobilePhone => mobilePhone.name.toLowerCase().includes(action.payload.toLowerCase()))
+
+            if(action.payload.length > 0) {
+                newState = {
+                    ...state,
+                    mobilePhones: filterMobilePhones
+                }
+            } else {
+                newState = {
+                    ...state,
+                    mobilePhones: state.mobilePhones
+                }
+            }
 
             return newState
             

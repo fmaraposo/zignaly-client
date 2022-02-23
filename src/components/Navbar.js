@@ -20,7 +20,7 @@ const Navbar = ({filterMobilePhones}) => {
                     InputProps={{
                         endAdornment: <SearchIcon/>
                       }}
-                    onChange={(e) => filterMobilePhones(e.target.value.toLowerCase()) }
+                    onChange={(e) => filterMobilePhones(e.target.value)}
                 />
             </li>
         </ul>
