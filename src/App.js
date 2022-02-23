@@ -1,4 +1,4 @@
-import React , { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import {
   BrowserRouter as Router,
@@ -12,19 +12,19 @@ import PhoneListContainer from '../src/components/PhoneListContainer';
 import PhoneDetailComponent from '../src/components/PhoneDetailComponent';
 import Navbar from '../src/components/Navbar';
 
-function App({getMobiles}) {
+function App({ getMobiles}) {
 
   useEffect(() => getMobiles(), [])
 
   return (
     <Router>
-      <div id= "navbar-container">
-        <Navbar/>
+      <div id="navbar-container">
+        <Navbar />
       </div>
       <main id="main-content">
         <Routes>
-          <Route path="/:id" element={<PhoneDetailComponent />}/>
-          <Route path="/" element={<PhoneListContainer />}/>
+          <Route path="/:id" element={<PhoneDetailComponent />} />
+          <Route path="/" element={<PhoneListContainer />} />
         </Routes>
       </main>
     </Router>
