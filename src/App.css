@@ -32,7 +32,7 @@
 
 .card-container-details {
   margin: 20px;
-  height: fit-content;
+  height: fit-content !important;
   width: 32vh; 
 }
 
